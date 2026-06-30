@@ -60,12 +60,7 @@
         {
           "anchor": "GitHub",
           "icon": "github",
-          "href": "https://github.com/YOUR_USERNAME/deobf-all"
-        },
-        {
-          "anchor": "社区",
-          "icon": "discord",
-          "href": "https://discord.gg/YOUR_INVITE"
+          "href": "https://github.com/zeij-drive/deobf"
         }
       ]
     }
@@ -75,9 +70,9 @@
     "url": "/quickstart"
   },
   "topbarLinks": [
-    { "name": "GitHub", "url": "https://github.com/YOUR_USERNAME/deobf-all" }
+    { "name": "GitHub", "url": "https://github.com/zeij-drive/deobf" }
   ],
   "footerSocials": {
-    "github": "https://github.com/YOUR_USERNAME/deobf-all"
+    "github": "https://github.com/zeij-drive/deobf"
   }
 }
