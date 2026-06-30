@@ -12,59 +12,64 @@
     "light": "#8B85FF",
     "dark": "#4A42E0"
   },
-  "anchors": [
-    {
-      "name": "GitHub 仓库",
-      "icon": "github",
-      "url": "https://github.com/YOUR_USERNAME/deobf-all"
-    },
-    {
-      "name": "社区",
-      "icon": "discord",
-      "url": "https://discord.gg/YOUR_INVITE"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "开始",
-      "pages": ["introduction", "quickstart", "requirements"]
-    },
-    {
-      "group": "安装",
-      "pages": ["installation/auto-install", "installation/manual-install", "installation/full-yaklang"]
-    },
-    {
-      "group": "指南",
-      "pages": ["guides/how-it-works", "guides/routing-logic", "guides/cross-skill-coordination"]
-    },
-    {
-      "group": "技能参考",
-      "pages": [
-        "skills/code-obfuscation-deobfuscation",
-        "skills/ast-deobfuscation",
-        "skills/vm-and-bytecode-reverse",
-        "skills/anti-debugging-techniques",
-        "skills/symbolic-execution-tools",
-        "skills/binary-protection-bypass",
-        "skills/ctf-reverse",
-        "skills/anti-reversing-techniques",
-        "skills/deep-analysis"
+  "navigation": {
+    "anchors": [
+      {
+        "anchor": "开始",
+        "icon": "rocket",
+        "pages": ["introduction", "quickstart", "requirements"]
+      },
+      {
+        "anchor": "安装",
+        "icon": "download",
+        "pages": ["installation/auto-install", "installation/manual-install", "installation/full-yaklang"]
+      },
+      {
+        "anchor": "指南",
+        "icon": "book-open",
+        "pages": ["guides/how-it-works", "guides/routing-logic", "guides/cross-skill-coordination"]
+      },
+      {
+        "anchor": "技能参考",
+        "icon": "wrench",
+        "pages": [
+          "skills/code-obfuscation-deobfuscation",
+          "skills/ast-deobfuscation",
+          "skills/vm-and-bytecode-reverse",
+          "skills/anti-debugging-techniques",
+          "skills/symbolic-execution-tools",
+          "skills/binary-protection-bypass",
+          "skills/ctf-reverse",
+          "skills/anti-reversing-techniques",
+          "skills/deep-analysis"
+        ]
+      },
+      {
+        "anchor": "示例",
+        "icon": "terminal",
+        "pages": ["examples/vmprotect-binary", "examples/obfuscator-io-js", "examples/ctf-reverse-challenge"]
+      },
+      {
+        "anchor": "其他",
+        "icon": "ellipsis",
+        "pages": ["architecture", "checklists", "contributing", "license"]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "GitHub",
+          "icon": "github",
+          "url": "https://github.com/YOUR_USERNAME/deobf-all"
+        },
+        {
+          "anchor": "社区",
+          "icon": "discord",
+          "url": "https://discord.gg/YOUR_INVITE"
+        }
       ]
-    },
-    {
-      "group": "示例",
-      "pages": ["examples/vmprotect-binary", "examples/obfuscator-io-js", "examples/ctf-reverse-challenge"]
-    },
-    {
-      "group": "其他",
-      "pages": ["architecture", "checklists", "contributing", "license"]
     }
-  ],
-  "tabs": [
-    { "name": "指南", "url": "/guides" },
-    { "name": "技能参考", "url": "/skills" },
-    { "name": "示例", "url": "/examples" }
-  ],
+  },
   "topbarCtaButton": {
     "name": "开始使用",
     "url": "/quickstart"
