@@ -1,11 +1,10 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "deobf by zeij",
+  "name": "deobf-all",
   "theme": "maple",
   "logo": {
     "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg",
-    "href": "/introduction"
+    "light": "/logo/light.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
