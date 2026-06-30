@@ -1,74 +1,29 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- 渐变定义 -->
+<svg width="300" height="44" viewBox="0 0 300 44" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#6C63FF"/>
       <stop offset="100%" stop-color="#4A42E0"/>
     </linearGradient>
-    <linearGradient id="unlockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8B85FF"/>
-      <stop offset="100%" stop-color="#6C63FF"/>
-    </linearGradient>
-    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.7"/>
-    </linearGradient>
-    <!-- 阴影滤镜 -->
-    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#4A42E0" flood-opacity="0.3"/>
-    </filter>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-  <!-- 底部光晕 -->
-  <ellipse cx="256" cy="470" rx="180" ry="30" fill="#6C63FF" opacity="0.15"/>
-
-  <!-- 盾牌主体 -->
-  <path d="M256 56 L420 128 L420 272 C420 376 348 440 256 472 C164 440 92 376 92 272 L92 128 Z" 
-        fill="url(#shieldGrad)" filter="url(#shadow)"/>
-
-  <!-- 盾牌内边框 -->
-  <path d="M256 76 L400 140 L400 268 C400 364 336 424 256 452 C176 424 112 364 112 268 L112 140 Z" 
-        fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="2"/>
-
-  <!-- 碎裂/剥离效果 - 从盾牌右上角裂开的碎片 -->
-  <path d="M340 100 L370 80 L380 110 L355 130 Z" fill="#8B85FF" opacity="0.6"/>
-  <path d="M365 115 L395 95 L400 125 L375 145 Z" fill="#8B85FF" opacity="0.4"/>
-  <path d="M375 140 L402 120 L408 148 L385 165 Z" fill="#8B85FF" opacity="0.3"/>
-
-  <!-- 解锁挂锁 - 主体 -->
-  <rect x="208" y="260" width="96" height="80" rx="12" fill="url(#unlockGrad)" filter="url(#glow)"/>
-
-  <!-- 解锁挂锁 - 锁环（打开状态） -->
-  <path d="M232 260 L232 220 C232 192 252 172 280 172 C308 172 328 192 328 220 L328 240" 
-        fill="none" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="12" stroke-linecap="round"/>
+  <!-- 盾牌图标 -->
+  <path d="M22 4 L40 10 L40 28 C40 34 34 39 22 42 C10 39 4 34 4 28 L4 10 Z" fill="url(#sg)"/>
   
-  <!-- 锁环断开间隙 - 表示已解锁 -->
-  <circle cx="328" cy="248" r="8" fill="#6C63FF"/>
-  <path d="M328 240 L328 260" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="4"/>
+  <!-- 挂锁锁体 -->
+  <rect x="15" y="24" width="14" height="12" rx="3" fill="#8B85FF"/>
+  
+  <!-- 锁环(打开) -->
+  <path d="M19 24 L19 19 C19 15 20.5 13 26 13" fill="none" stroke="white" stroke-opacity="0.9" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="26" cy="14.5" r="1.8" fill="#6C63FF"/>
+  <line x1="26" y1="13" x2="26" y2="17" stroke="white" stroke-opacity="0.9" stroke-width="1.3"/>
+  
+  <!-- 代码符号 < in lock -->
+  <path d="M17 31 L14 29.5 L17 28" fill="none" stroke="white" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- / in lock -->
+  <line x1="21" y1="32" x2="23" y2="27.5" stroke="white" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- > in lock -->
+  <path d="M27 31 L30 29.5 L27 28" fill="none" stroke="white" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- 代码符号 < / > 在锁体上 -->
-  <text x="256" y="308" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="38" fill="url(#codeGrad)" filter="url(#glow)">
-    &#60;/&#62;
-  </text>
-
-  <!-- 飞散的代码碎片 - 代表反混淆过程 -->
-  <rect x="140" y="180" width="24" height="4" rx="2" fill="#FFFFFF" opacity="0.6" transform="rotate(-15 152 182)"/>
-  <rect x="128" y="200" width="18" height="4" rx="2" fill="#FFFFFF" opacity="0.4" transform="rotate(-8 137 202)"/>
-  <rect x="340" y="175" width="20" height="4" rx="2" fill="#FFFFFF" opacity="0.5" transform="rotate(12 350 177)"/>
-  <rect x="355" y="195" width="16" height="4" rx="2" fill="#FFFFFF" opacity="0.35" transform="rotate(5 363 197)"/>
-
-  <!-- 小圆点装饰 - 数据粒子 -->
-  <circle cx="155" cy="155" r="3" fill="#8B85FF" opacity="0.7"/>
-  <circle cx="175" cy="138" r="2" fill="#8B85FF" opacity="0.5"/>
-  <circle cx="345" cy="155" r="3" fill="#8B85FF" opacity="0.7"/>
-  <circle cx="325" cy="138" r="2" fill="#8B85FF" opacity="0.5"/>
-  <circle cx="165" cy="340" r="2.5" fill="#8B85FF" opacity="0.4"/>
-  <circle cx="350" cy="330" r="2.5" fill="#8B85FF" opacity="0.4"/>
+  <!-- 品牌文字 -->
+  <text x="50" y="30" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="22" fill="#4A42E0">deobf<tspan font-weight="400" fill="#6C63FF">-all</tspan></text>
 </svg>
