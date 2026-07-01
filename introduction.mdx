@@ -6,7 +6,7 @@ icon: shield-check
 
 # deobf-all 简介
 
-**deobf-all** 是一个 Agent Skill，充当反混淆工作流的统一入口。你不需要为不同的混淆类型手动加载各自的 skill，只需调用一次 `deobf-all`，它就会自动完成全部调度。
+**deobf-all** 是一个 Agent Skill，充当反混淆工作流的统一入口。一条命令 `npx skills add zeij-drive/deobf -g -y` 即可安装，调用一次 `/deobf-all`，它就会自动完成全部调度。
 
 <Steps>
   **加载**
@@ -30,7 +30,7 @@ icon: shield-check
 
 <CardGroup cols={2}>
   <Card title="统一入口" icon="bolt">
-    不必记住每个 skill 的名称。一个命令 `/deobf-all`，自动拉起全部 9 个专业子 skill。
+    不必记住每个 skill 的名称。一条命令 `npx skills add zeij-drive/deobf -g -y` 安装，一个命令 `/deobf-all` 调用，自动拉起全部 9 个专业子 skill。
   </Card>
   <Card title="智能路由" icon="route">
     根据目标类型和混淆特征，自动选择最优 skill 组合，而非暴力加载全部能力。
@@ -38,7 +38,7 @@ icon: shield-check
   <Card title="全场景覆盖" icon="shield-check">
     从 VMProtect 到 obfuscator.io，从 OLLVM 到自定义 VM — 覆盖主流混淆与保护方案。
   </Card>
-  <Card title="可扩展" icon="puzzle-piece">
+  <Card title="可扩展" icon="layers">
     架构设计为可扩展：新增子 skill 只需更新调度器的路由表。
   </Card>
 </CardGroup>
