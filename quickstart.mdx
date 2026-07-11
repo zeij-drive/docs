@@ -16,20 +16,20 @@ icon: rocket
     curl -fsSL https://raw.githubusercontent.com/zeij-drive/deobf/main/install.sh | bash
     ```
   </Tab>
-  <Tab title="Windows">
-    ```cmd
-    npx skills add zeij-drive/deobf -g -y
+  <Tab title="Windows (PowerShell)">
+    ```powershell
+    powershell -c "iwr -useb https://raw.githubusercontent.com/zeij-drive/deobf/main/install.bat -outf $env:TEMP\deobf.bat; Unblock-File $env:TEMP\deobf.bat; cmd /c $env:TEMP\deobf.bat"
     ```
   </Tab>
 </Tabs>
 
-安装后首次调用 `/deobf-all` 时会自动按需加载子 skill。如需**完整预装全部 26 个子 skill**，请克隆仓库后本地运行 `install.bat`。
+安装后首次调用 `/deobf-all` 时会自动按需加载子 skill。如需**完整预装全部 26 个子 skill**，上面的 PowerShell 命令即可全量安装，无需克隆仓库。
 - 自动注册到所有已安装的 agent 平台
 
 ## 方式 1：Skills.sh 一键安装（安装调度器）
 
 ```bash
-npx skills add zeij-drive/deobf -g -y
+npx skills add zeij-drive/deobf -y
 ```
 
 > 通过 [skills.sh](https://skills.sh/zeij-drive/deobf) 安装 `deobf-all` 调度 skill。首次调用时会自动拉起子 skill。
